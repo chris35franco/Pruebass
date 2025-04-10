@@ -3,14 +3,15 @@ pipeline {
     stages {
         stage('Instalar dependencias') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'pip3 install -r requirements.txt'
             }
         }
         stage('Ejecutar pruebas') {
             steps {
-                sh 'pytest prueba_calculo_pago.py'
+                sh 'python3 -m pytest prueba_calculo_pago.py'
             }
         }
     }
 }
+
 
